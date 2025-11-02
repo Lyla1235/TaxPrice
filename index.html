@@ -7,15 +7,16 @@
 </head>
 <body>
     <script>
-        price=[12.98,14.20,5.86,9.25,14.7];
-        taxed=price.map(function(num){
+        prices=[12.98,14.20,5.86,9.25,14.7];
+        taxed=prices.map(function(num){
             return num + num * 0.13
         });
         console.log(taxed);
-        formatted=taxed.map(function(num){
-            return '$' + num.toFixed(2)
+        formatted=taxed.map(function(price){
+            return '$' + price.toFixed(2) + "<br>"
         })
         console.log(formatted);
+        document.write(`${formatted} <br>`)
 
     </script>
 </body>
